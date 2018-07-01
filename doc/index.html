@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simple-Calendar</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/calendar.png">
+	<!-- Bulma Version 0.7.1-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/blog.css">
+</head>
+
+<body>
+	<section class="hero is-info is-medium is-bold">
+		<div class="hero-body">
+			<div class="container has-text-centered">
+				<h1 class="title">留学生の出席率の計算</h1>
+			</div>
+		</div>
+	</section>
+	<div class="container">
+		<!-- START ARTICLE FEED -->
+		<section class="articles">
+			<div class="column is-8 is-offset-2">
+				<!-- START ARTICLE -->
+				<div class="card article">
+					<div class="card-content">
+						<div class="media-center">
+							<img src="./images/smile.png" class="author-image" alt="Placeholder image">
+						</div>
+						<div class="date-container">
+							<div class="date-style">
+								开始日期：
+								<input type="date" id="start_date" style="border-radius: 4px" placeholder="请输入开始日期" value="" readonly>
+							</div>
+							<div class="date-span">
+								开始日期:<span id="start_date_span" class="date-span"></span>
+							</div>
+							<div class="date-style">
+								结束日期：
+								<input type="date" id="end_date" style="border-radius: 4px" placeholder="请输入结束日期" value="" readonly>
+							</div>
+							<div class="date-span">
+							  结束日期:<span id="end_date_span" class="date-span"></span>
+							</div>
+						</div>
+						<div class="date-container">
+							<div class="date-style">
+								假期开始日期：
+								<input type="date" id="holiday_start_date" style="border-radius: 4px" placeholder="请输入开始日期" value="" readonly>
+							</div>
+							<div class="date-span">
+								假期开始:<span id="holiday_start_date_span" class="date-span"></span>
+							</div>
+							<div class="date-style">
+								假期结束日期：
+								<input type="date" id="holiday_end_date" style="border-radius: 4px" placeholder="请输入结束日期" value="" readonly>
+							</div>
+							<div class="date-span">
+								假期结束:<span id="holiday_end_date_span" class="date-span"></span>
+							</div>
+						</div>
+						<div class="table-container">
+							<div class="column is-half" style="margin: auto">
+								<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+									<thead>
+										<tr>
+											<th style="text-align: center">星期</th>
+											<th style="text-align: center">课时数</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>星期一</td>
+											<td><input type='number' value="7" min="1" max="10" /></td>
+										</tr>
+										<tr>
+											<td>星期二</td>
+											<td><input type='number' value="9" min="1" max="10" /></td>
+										</tr>
+										<tr>
+											<td>星期三</td>
+											<td><input type='number' value="7" min="1" max="10" /></td>
+										</tr>
+										<tr>
+											<td>星期四</td>
+											<td><input type='number' value="9" min="1" max="10" /></td>
+										</tr>
+										<tr>
+											<td>星期五</td>
+											<td><input type='number' value="7" min="1" max="10" /></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class='confirm-config'>
+								<button id="confirm_config" class="button is-link">确定</button>
+							</div>
+						</div>
+						<div>
+
+						</div>
+						<div class="content-result">
+							<div class="rate-container">出席率：<span id="res_rate" class='show-rate'>100%</span></div>
+							<div class="rate-container">缺席课时数：<span id="absent_lessons" class='show-rate'>0</span>レッスン</div>
+						</div>
+						<div class="button-container">
+							<div class="button-group">
+								<span>一节：</span>
+								<a class="button minus-one is-outlined"> - </a>
+								<span class='has-absent' id="one">0</span>
+								<a class="button add-one is-outlined"> + </a>
+							</div>
+							<div class="button-group">
+								<span>周一：</span>
+								<a class="button minus-mon is-primary is-outlined"> - </a>
+								<span class='has-absent' id="mon">0</span>
+								<a class="button add-mon is-primary is-outlined"> + </a>
+							</div>
+							<div class="button-group">
+								<span>周二：</span>
+								<a class="button minus-thu is-link is-outlined"> - </a>
+								<span class='has-absent' id="thu">0</span>
+								<a class="button add-thu is-link is-outlined"> + </a>
+							</div>
+							<div class="button-group">
+								<span>周三：</span>
+								<a class="button minus-wed is-info is-outlined"> - </a>
+								<span class='has-absent' id="wed">0</span>
+								<a class="button add-wed is-info is-outlined"> + </a>
+							</div>
+							<div class="button-group">
+								<span>周四：</span>
+								<a class="button minus-thr is-success is-outlined"> - </a>
+								<span class='has-absent' id="thr">0</span>
+								<a class="button add-thr is-success is-outlined"> + </a>
+							</div>
+							<div class="button-group">
+								<span>周五：</span>
+								<a class="button minus-fri is-danger is-outlined"> - </a>
+								<span class='has-absent' id="fri">0</span>
+								<a class="button add-fri is-danger is-outlined"> + </a>
+							</div>
+							<button id='calculate' class="button is-success is-outlined"> 计算 </button>
+							<button style="margin-top: 10px" id='reset_config' class="button is-info is-outlined"> 重置 </button>						
+						</div>
+					</div>
+				</div>
+				<div class="subtitle is-6 article-subtitle">
+					<a href="#">@author</a> luffyZhou
+				</div>
+		</section>
+		<!-- END ARTICLE FEED -->
+	</div>
+	<script src="https://cdn.bootcss.com/moment.js/2.22.1/moment.min.js"></script>
+	<script src="./js/zepto.js"></script>
+	<script src="./js/util.js"></script>
+	<script async type="text/javascript" src="./js/bulma.js"></script>
+</body>
+</html>

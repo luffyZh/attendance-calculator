@@ -1,0 +1,135 @@
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background: #F0F2F4;
+}
+table tbody tr td {
+  text-align: center;
+}
+table tbody tr td>input {
+  text-align: center;
+  width: 50px;
+}
+.title {
+  margin-top: 60px;
+}
+.navbar.is-white {
+  background: #F0F2F4;
+}
+
+.navbar-brand .brand-text {
+  font-size: 1.11rem;
+  font-weight: bold;
+}
+
+.hero-body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Plum_trees_Kitano_Tenmangu.jpg/1200px-Plum_trees_Kitano_Tenmangu.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  min-height: 300px;
+}
+
+.articles {
+  margin-top: -200px;
+}
+
+.articles .content p {
+  line-height: 1.9;
+  margin: 15px 0;
+}
+
+.author-image {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  margin-left: -32px;
+  border: 3px solid #eee;
+  border-radius: 50%;
+}
+
+.media-center {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.media-content {
+  margin-top: 3rem;
+}
+
+.article,
+.promo-block {
+  margin-top: 8rem;
+}
+
+div.column.is-8:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.article-title {
+  font-size: 1rem;
+  font-weight: lighter;
+  font-weight: 500;
+  text-align: center
+}
+
+.article-subtitle {
+  color: #909AA0;
+  padding: 6px;
+  text-align: center;
+}
+
+.article-body {
+  line-height: 1.4;
+  margin: 0 6rem;
+}
+
+.rate-container {
+  text-align: center;
+  padding: 6px;
+}
+
+.date-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.date-style {
+  width: 40%;
+}
+.date-span {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.date-span span {
+  color: blue;
+  margin-left: 4px;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0 ;
+  padding: 4px;
+}
+.button-group span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.confirm-config {
+  text-align: center;
+}
+.confirm-config button{
+  padding: 0px 20px;
+}

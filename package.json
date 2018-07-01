@@ -1,0 +1,10 @@
+{
+  "name": "attendance calculator",
+  "version": "1.0.0",
+  "description": "attendance calculator.",
+  "main": "index.html",
+  "repository": "https://github.com/luffyZh/attendance-calculator.git",
+  "author": "luffyZhou <zhoudeyou945@126.com>",
+  "license": "MIT",
+  "homepage": "https://luffyzh.github.io/attendance-calculator"
+}

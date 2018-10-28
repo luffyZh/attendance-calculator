@@ -57,6 +57,7 @@ window.onload = function() {
     const holidayDateArr = generateDateArray(holidayStartDate, holidayEndDate);
     totalDateArr.forEach(function(item) {
       if (!(holidayDateArr.indexOf(item) > -1)) {
+        console.log(moment(item));
         totalLessons += dayLessons[Number(moment(item).day())];
       }
     });

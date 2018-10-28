@@ -49,7 +49,7 @@ function generateDateArrayByMonth(startDate, endDate) {
   const endObj = dateStr2Object(endDate);
   let resultArr = [];
   for (let m=Number(startObj.month); m <= Number(endObj.month); m++) {
-    let firstStr = `${startObj.year}-${m > 10 ? m : '0' + m}`;
+    let firstStr = `${startObj.year}-${m >= 10 ? m : '0' + m}`;
     let leftDay = 1;
     let rightDay = moment(firstStr).daysInMonth();
     if (m === Number(startObj.month)) {

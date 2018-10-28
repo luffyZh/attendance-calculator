@@ -17,10 +17,10 @@ window.onload = function() {
 		$('.date-span').css('display', "none");
     $('.button-container').css('display', 'none');
     $('.table-container').css('display', 'block'); 
-    document.getElementById('start_date').value = moment('2018-04-11').format('YYYY-MM-DD');
-    document.getElementById('end_date').value = moment('2018-09-11').format('YYYY-MM-DD');
-    document.getElementById('holiday_start_date').value = moment('2018-07-20').format('YYYY-MM-DD');
-    document.getElementById('holiday_end_date').value = moment('2018-08-22').format('YYYY-MM-DD');
+    document.getElementById('start_date').value = moment('2018-10-15').format('YYYY-MM-DD');
+    document.getElementById('end_date').value = moment('2019-03-09').format('YYYY-MM-DD');
+    document.getElementById('holiday_start_date').value = moment('2018-12-22').format('YYYY-MM-DD');
+    document.getElementById('holiday_end_date').value = moment('2019-01-14').format('YYYY-MM-DD');
   } else {
     $('.date-span').css('display', "flex");
     $('.date-style').css('display', 'none');
@@ -104,10 +104,10 @@ window.onload = function() {
       $(item).text('0');
     });
     window.localStorage.removeItem('luffy_calendar_obj');
-    document.getElementById('start_date').value = moment('2018-04-11').format('YYYY-MM-DD');
-    document.getElementById('end_date').value = moment('2018-09-11').format('YYYY-MM-DD');
-    document.getElementById('holiday_start_date').value = moment('2018-07-20').format('YYYY-MM-DD');
-    document.getElementById('holiday_end_date').value = moment('2018-08-22').format('YYYY-MM-DD');
+    document.getElementById('start_date').value = moment('2018-10-15').format('YYYY-MM-DD');
+    document.getElementById('end_date').value = moment('2019-03-09').format('YYYY-MM-DD');
+    document.getElementById('holiday_start_date').value = moment('2018-12-22').format('YYYY-MM-DD');
+    document.getElementById('holiday_end_date').value = moment('2019-01-14').format('YYYY-MM-DD');
   });
 
   // 点击＋ -
